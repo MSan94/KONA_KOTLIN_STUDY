@@ -67,3 +67,33 @@ fun main(){
     println(c === e) // c,e는 값도 값고 참조된 객체도 같아서 true , c -> a , e -> c
 }
 ```
+
+# 자료형 검사
+- is
+```
+    val num = 256
+
+    if(num is Int){
+        println("int")
+    }else if(num !is Int){
+        print("Not int")
+    }
+```
+
+# 묵시적 변환
+- Any : 자바의 Object 같은거
+```
+fun main(){
+    checkArg("Hello")
+    checkArg(5)
+}
+
+fun checkArg(x : Any){
+    if( x is String){
+        println("x is String : $x")
+    }
+    if( x is Int){
+        println("x is Int : $x")
+    }
+}
+```
